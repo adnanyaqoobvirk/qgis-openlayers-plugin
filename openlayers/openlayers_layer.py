@@ -173,7 +173,6 @@ class OpenlayersLayer(QgsPluginLayer):
 
       if self.layerType.emitsLoadEnd:
         # wait for OpenLayers to finish loading
-        # NOTE: does not work with Google and Yahoo layers as they do not emit loadstart and loadend events
         self.loadEnd = False
         self.timerLoadEnd.start()
         while not self.loadEnd:
